@@ -10,6 +10,12 @@ fn main() {
     boolean_function();
     // 5
     char_function();
+    // 6
+    arrays_function();
+    // 7
+    tuples_function();
+    // 8
+    slices_function();
 }
 
 // Primitive data types
@@ -43,4 +49,26 @@ fn boolean_function() {
 fn char_function() {
     let letter: char = 'a';
     println!("First letter of the alphabet: {}", letter);
+}
+
+// Compound Data Types
+// arrays, tuples, slices, strigns (slice string)
+
+// Arrays
+fn arrays_function() {
+    let numbers: [i32; 5] = [1, 2, 3, 4, 5];
+    println!("Array numbers: {:?}", numbers);
+}
+
+// Tuples
+fn tuples_function() {
+    // Puoi anche non inserire i tipi di ogni elemento
+    let human: (&str, i32, bool, [i32; 3]) = ("Alice", 30, false, [1, 2, 3]);
+    println!("Human Tuple: {:?}", human);
+}
+
+// Slices
+fn slices_function() {
+    let number_slices: &[i32] = &[1, 2, 3, 4, 5, 6];
+    println!("Number Slice: {:?}", number_slices);
 }
